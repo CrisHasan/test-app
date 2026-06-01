@@ -79,7 +79,7 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
     })
     
     # Create Altair chart with Y-axis limits
-    chart = alt.Chart(data).mark_bar().add_selection(
+    chart = alt.Chart(data).mark_bar(color='#FF4500').add_selection(
         alt.selection_interval(bind='scales', encodings=['x'])  # Only allow X-axis interaction
     ).encode(
         y=alt.Y('category:N', title=xlabel),
@@ -103,8 +103,12 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
 
 ###############################################
 st.title("Indicator Workshop Interactive Tool")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Cleanse the Air indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+
+no2_concentration_target = st.number_input("Target levels of annual concentration of NO2 (µg/m³)", min_value=0.0, max_value=100.0, value=no2_concentration_target, step=0.1)     
 no2_concentration_baseline = st.number_input("Baseline levels of annual concentration of NO2 (µg/m³)", min_value=0.0, max_value=100.0, value=no2_concentration_baseline, step=0.1)
-no2_concentration_target = st.number_input("Desired (maximum) levels of annual concentration of NO2 (µg/m³)", min_value=0.0, max_value=100.0, value=no2_concentration_target, step=0.1)     
 no2_concentration_current = st.slider("Current levels of annual concentration of NO2 (µg/m³)", min_value=0.0, max_value=100.0, value=no2_concentration_current, step=0.1)
 no2_concentration_overshoot_value = min(100,100*(no2_concentration_current - no2_concentration_target)/(no2_concentration_baseline - no2_concentration_target))  
 altair_horizontal_bar_chart(
@@ -115,8 +119,8 @@ altair_horizontal_bar_chart(
     y_min=0,
     y_max=100  # Set maximum value for the axis
 )   
+pm10_concentration_target = st.number_input("Target levels of annual concentration of PM10 (µg/m³)", min_value=0.0, max_value=100.0, value=pm10_concentration_target, step=0.1)
 pm10_concentration_baseline = st.number_input("Baseline levels of annual concentration of PM10 (µg/m³)", min_value=0.0, max_value=100.0, value=pm10_concentration_baseline, step=0.1)
-pm10_concentration_target = st.number_input("Desired (maximum) levels of annual concentration of PM10 (µg/m³)", min_value=0.0, max_value=100.0, value=pm10_concentration_target, step=0.1)
 pm10_concentration_current = st.slider("Current levels of annual concentration of PM10 (µg/m³)", min_value=0.0, max_value=100.0, value=pm10_concentration_current, step=0.1)
 pm10_concentration_overshoot_value = min(100,100*(pm10_concentration_current - pm10_concentration_target)/(pm10_concentration_baseline - pm10_concentration_target))  
 altair_horizontal_bar_chart(
@@ -128,35 +132,41 @@ altair_horizontal_bar_chart(
     y_max=100  # Set maximum value for the axis
 )   
 
+pm25_concentration_target = st.number_input("Target levels of annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pm25_concentration_target, step=0.1)
 pm25_concentration_baseline = st.number_input("Baseline levels of annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pm25_concentration_baseline, step=0.1)
-pm25_concentration_target = st.number_input("Desired (maximum) levels of annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pm25_concentration_target, step=0.1)
 pm25_concentration_current = st.slider("Current levels of annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pm25_concentration_current, step=0.1)
 pm25_concentration_overshoot_value = min(100,100*(pm25_concentration_current - pm25_concentration_target)/(pm25_concentration_baseline - pm25_concentration_target))  
 altair_horizontal_bar_chart(
     x=[pm25_concentration_overshoot_value],
     y=["PM2.5 Concentration"],
-    title="Cleanse the Air Overshoot",
+    title="PM2.5 Concentration Overshoot",
     xlabel="Category",
     y_min=0,
     y_max=100  # Set maximum value for the axis
 )
 
+pop_weighted_pm25_concentration_target = st.number_input("Target levels of population-weighted annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pop_weighted_pm25_concentration_target, step=0.1)
 pop_weighted_pm25_concentration_baseline = st.number_input("Baseline levels of population-weighted annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pop_weighted_pm25_concentration_baseline, step=0.1)
-pop_weighted_pm25_concentration_target = st.number_input("Desired (maximum) levels of population-weighted annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pop_weighted_pm25_concentration_target, step=0.1)
 pop_weighted_pm25_concentration_current = st.slider("Current levels of population-weighted annual concentration of PM2.5 (µg/m³)", min_value=0.0, max_value=100.0, value=pop_weighted_pm25_concentration_current, step=0.1)
 pop_weighted_pm25_concentration_overshoot_value = min(100,100*(pop_weighted_pm25_concentration_current - pop_weighted_pm25_concentration_target)/(pop_weighted_pm25_concentration_baseline - pop_weighted_pm25_concentration_target))  
 altair_horizontal_bar_chart(
     x=[pop_weighted_pm25_concentration_overshoot_value],
     y=["Population-weighted PM2.5 Concentration"],
-    title="Cleanse the Air Concentration Overshoot",
+    title="Population-weighted PM2.5 Concentration Overshoot",
     xlabel="Category",
     y_min=0,
     y_max=100  # Set maximum value for the axis
 )
 
 
+
+##########################################
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Income and Work indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+
+percentage_households_financially_manage_well_target = st.number_input("Target percentage of households financially managing well (%)", min_value=0.0, max_value=100.0, value=percentage_households_financially_manage_well_target, step=0.1)
 percentage_households_financially_manage_well_baseline = st.number_input("Baseline percentage of households financially managing well (%)", min_value=0.0, max_value=100.0, value=percentage_households_financially_manage_well_baseline, step=0.1)
-percentage_households_financially_manage_well_target = st.number_input("Desired (maximum) percentage of households financially managing well (%)", min_value=0.0, max_value=100.0, value=percentage_households_financially_manage_well_target, step=0.1)
 percentage_households_financially_manage_well_current = st.slider("Current percentage of households financially managing well (%)", min_value=0.0, max_value=100.0, value=percentage_households_financially_manage_well_current, step=0.1)
 percentage_households_financially_manage_well_shortfall_value = min(100,100*(percentage_households_financially_manage_well_target - percentage_households_financially_manage_well_current)/(percentage_households_financially_manage_well_target - percentage_households_financially_manage_well_baseline))  
 altair_horizontal_bar_chart(
@@ -167,8 +177,8 @@ altair_horizontal_bar_chart(
     y_min=0,
     y_max=100  # Set maximum value for the axis
 )  
+percentage_children_low_income_families_target = st.number_input("Target percentage of children living in relative low-income families (%)", min_value=0.0, max_value=100.0, value=percentage_children_low_income_families_target, step=0.1) 
 percentage_children_low_income_families_baseline = st.number_input("Baseline percentage of children living in relative low-income families (%)", min_value=0.0, max_value=100.0, value=percentage_children_low_income_families_baseline, step=0.1)
-percentage_children_low_income_families_target = st.number_input("Desired (minimum) percentage of children living in relative low-income families (%)", min_value=0.0, max_value=100.0, value=percentage_children_low_income_families_target, step=0.1) 
 percentage_children_low_income_families_current = st.slider("Current percentage of children living in relative low-income families (%)", min_value=0.0, max_value=100.0, value=percentage_children_low_income_families_current, step=0.1)
 percentage_children_low_income_families_shortfall_value = min(100,100*(percentage_children_low_income_families_current - percentage_children_low_income_families_target)/(percentage_children_low_income_families_baseline - percentage_children_low_income_families_target))  
 altair_horizontal_bar_chart(
@@ -180,8 +190,8 @@ altair_horizontal_bar_chart(
     y_max=100  # Set maximum value for the axis
 )
 
+unemployment_rate_target = st.number_input("Target unemployment rate (%)", min_value=0.0, max_value=100.0, value=unemployment_rate_target, step=0.1)
 unemployment_rate_baseline = st.number_input("Baseline unemployment rate (%)", min_value=0.0, max_value=100.0, value=unemployment_rate_baseline, step=0.1)
-unemployment_rate_target = st.number_input("Desired (maximum) unemployment rate (%)", min_value=0.0, max_value=100.0, value=unemployment_rate_target, step=0.1)
 unemployment_rate_current = st.slider("Current unemployment rate (%)", min_value=0.0, max_value=100.0, value=unemployment_rate_current, step=0.1)
 unemployment_rate_shortfall_value = min(100,100*(unemployment_rate_current - unemployment_rate_target)/(unemployment_rate_baseline - unemployment_rate_target))  
 altair_horizontal_bar_chart(
@@ -193,8 +203,15 @@ altair_horizontal_bar_chart(
     y_max=100  # Set maximum value for the axis
 )
 
+##########################################
+# Change color of markdown lines
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Food indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+
+
+percentage_experince_any_event_food_insecurity_target = st.number_input("Target percentage of people who experienced any event of food insecurity over the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_experince_any_event_food_insecurity_target, step=0.1)
 percentage_experince_any_event_food_insecurity_baseline = st.number_input("Baseline percentage of people who experienced any event of food insecurity over the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_experince_any_event_food_insecurity_baseline, step=0.1)
-percentage_experince_any_event_food_insecurity_target = st.number_input("Desired (minimum) percentage of people who experienced any event of food insecurity over the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_experince_any_event_food_insecurity_target, step=0.1)
 percentage_experince_any_event_food_insecurity_current = st.slider("Current percentage of people who experienced any event of food insecurity over the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_experince_any_event_food_insecurity_current, step=0.1)
 percentage_experince_any_event_food_insecurity_shortfall_value = min(100,100*(percentage_experince_any_event_food_insecurity_current - percentage_experince_any_event_food_insecurity_target)/(percentage_experince_any_event_food_insecurity_baseline - percentage_experince_any_event_food_insecurity_target))  
 altair_horizontal_bar_chart(
@@ -207,8 +224,8 @@ altair_horizontal_bar_chart(
 )           
 
 
+gap_in_food_insecurity_target = st.number_input("Target gap in the percentage of people who experienced any event of food insecurity over the last 12 months between the bottom 15% deprived and other areas of Glasgow (%)", min_value=0.0, max_value=100.0, value=gap_in_food_insecurity_target, step=0.1)
 gap_in_food_insecurity_baseline = st.number_input("Baseline gap in the percentage of people who experienced any event of food insecurity over the last 12 months between the bottom 15% deprived and other areas of Glasgow (%)", min_value=0.0, max_value=100.0, value=gap_in_food_insecurity_baseline, step=0.1)
-gap_in_food_insecurity_target = st.number_input("Desired (minimum) gap in the percentage of people who experienced any event of food insecurity over the last 12 months between the bottom 15% deprived and other areas of Glasgow (%)", min_value=0.0, max_value=100.0, value=gap_in_food_insecurity_target, step=0.1)
 gap_in_food_insecurity_current = st.slider("Current gap in the percentage of people who experienced any event of food insecurity over the last 12 months between the bottom 15% deprived and other areas of Glasgow (%)", min_value=0.0, max_value=100.0, value=gap_in_food_insecurity_current, step=0.1)
 gap_in_food_insecurity_shortfall_value = min(100,100*(gap_in_food_insecurity_current - gap_in_food_insecurity_target)/(gap_in_food_insecurity_baseline - gap_in_food_insecurity_target))        
 altair_horizontal_bar_chart(
@@ -220,8 +237,8 @@ altair_horizontal_bar_chart(
     y_max=100  # Set maximum value for the axis
 )   
 
+percentage_people_food_cost_financial_concerns_target = st.number_input("Target percentage of people who consider food cost among the two or three biggest financial concerns for their household (%)", min_value=0.0, max_value=100.0, value=percentage_people_food_cost_financial_concerns_target, step=0.1)
 percentage_people_food_cost_financial_concerns_baseline = st.number_input("Baseline percentage of people who consider food cost among the two or three biggest financial concerns for their household (%)", min_value=0.0, max_value=100.0, value=percentage_people_food_cost_financial_concerns_baseline, step=0.1)
-percentage_people_food_cost_financial_concerns_target = st.number_input("Desired (minimum) percentage of people who consider food cost among the two or three biggest financial concerns for their household (%)", min_value=0.0, max_value=100.0, value=percentage_people_food_cost_financial_concerns_target, step=0.1)
 percentage_people_food_cost_financial_concerns_current = st.slider("Current percentage of people who consider food cost among the two or three biggest financial concerns for their household (%)", min_value=0.0, max_value=100.0, value=percentage_people_food_cost_financial_concerns_current, step=0.1)
 percentage_people_food_cost_financial_concerns_shortfall_value = min(100,100*(percentage_people_food_cost_financial_concerns_current - percentage_people_food_cost_financial_concerns_target)/(percentage_people_food_cost_financial_concerns_baseline - percentage_people_food_cost_financial_concerns_target))  
 altair_horizontal_bar_chart(
@@ -233,8 +250,8 @@ altair_horizontal_bar_chart(
     y_max=100  # Set maximum value for the axis
 )   
 
+percentage_people_unable_to_eat_healthy_food_target = st.number_input("Target percentage of people who were unable to eat healthy and nutritious food because of a lack of money or other resources in the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_people_unable_to_eat_healthy_food_target, step=0.1)
 percentage_people_unable_to_eat_healthy_food_baseline = st.number_input("Baseline percentage of people who were unable to eat healthy and nutritious food because of a lack of money or other resources in the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_people_unable_to_eat_healthy_food_baseline, step=0.1)
-percentage_people_unable_to_eat_healthy_food_target = st.number_input("Desired (minimum) percentage of people who were unable to eat healthy and nutritious food because of a lack of money or other resources in the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_people_unable_to_eat_healthy_food_target, step=0.1)
 percentage_people_unable_to_eat_healthy_food_current = st.slider("Current percentage of people who were unable to eat healthy and nutritious food because of a lack of money or other resources in the last 12 months (%)", min_value=0.0, max_value=100.0, value=percentage_people_unable_to_eat_healthy_food_current, step=0.1)
 percentage_people_unable_to_eat_healthy_food_shortfall_value = min(100,100*(percentage_people_unable_to_eat_healthy_food_current - percentage_people_unable_to_eat_healthy_food_target)/(percentage_people_unable_to_eat_healthy_food_baseline - percentage_people_unable_to_eat_healthy_food_target))  
 altair_horizontal_bar_chart(
@@ -245,48 +262,3 @@ altair_horizontal_bar_chart(
     y_min=0,
     y_max=100  # Set maximum value for the axis
 )       
-
-
-active_travel_baseline = st.number_input("Baseline percentage of the population using active travel modes (%)", min_value=0.0, max_value=100.0, value=active_travel_baseline, step=0.1)
-active_travel_target = st.number_input("Desired (minimum) percentage of the population using active travel modes (%)", min_value=0.0, max_value=100.0, value=active_travel_target, step=0.1) 
-active_travel_mode_current = st.slider("Current value of percentage of the population using active travel modes (%)", min_value=0.0, max_value=100.0, value=active_travel_mode_current, step=0.1)
-active_travel_shortfall_value = min(100,100*(active_travel_target - active_travel_mode_current)/(active_travel_target - active_travel_baseline))
-
-
-altair_horizontal_bar_chart(
-    x=[active_travel_shortfall_value],
-    y=["Active Travel"],
-    title="Active Travel Shortfall",
-    xlabel="Category",
-    y_min=0,
-    y_max=100  # Set maximum value for the axis
-)
-
-connectivity_baseline = st.number_input("Baseline percentage of the population with good connectivity (%)", min_value=0.0, max_value=100.0, value=connectivity_baseline, step=0.1)
-connectivity_target = st.number_input("Desired (minimum) percentage of the population with good connectivity (%)", min_value=0.0, max_value=100.0, value=connectivity_target, step=0.1)
-connectivity_current = st.slider("Current percentage of the population with good connectivity (%)", min_value=0.0, max_value=100.0, value=connectivity_current, step=0.1)
-connectivity_shortfall_value = min(100,100*(connectivity_target - connectivity_current)/(connectivity_target - connectivity_baseline))
-
-altair_horizontal_bar_chart(
-    x=[connectivity_shortfall_value],
-    y=["Connectivity"],
-    title="Connectivity Shortfall",
-    xlabel="Category",
-    y_min=0,
-    y_max=100  # Set maximum value for the axis
-)
-
-GHG_emissions_baseline = st.number_input("Baseline GHG emissions in (tCO2e per capita)", min_value=0.0, max_value=100.0, value=GHG_emissions_baseline, step=0.1)
-GHG_emissions_target = st.number_input("Desired (maximum) GHG emissions (tCO2e per capita)", min_value=0.0, max_value=100.0, value=GHG_emissions_target, step=0.1)
-GHG_emissions_current = st.slider("Current GHG emissions (tCO2e per capita)", min_value=0.0, max_value=15.0, value=GHG_emissions_current, step=0.1)
-GHG_emissions_overshoot_value = min(100,100*(GHG_emissions_current - GHG_emissions_target)/(GHG_emissions_baseline - GHG_emissions_target))
-
-altair_horizontal_bar_chart(
-    x=[GHG_emissions_overshoot_value],
-    y=["GHG Emissions"],
-    title="GHG Emissions Overshoot",
-    xlabel="Category",
-    y_min=0,
-    y_max=100  # Set maximum value for the axis
-)   
-
