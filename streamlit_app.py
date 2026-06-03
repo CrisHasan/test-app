@@ -4,15 +4,15 @@ import pandas as pd
 
 ###############################################
 no2_concentration_target = 10.0 # Target levels of annual concentration of NO2 (µg/m³)
-no2_concentration_baseline = 20.0  # Baseline levels of annual concentration of NO2 (µg/m³)
+no2_concentration_baseline = 43.07  # Baseline levels of annual concentration of NO2 (µg/m³)
 no2_concentration_current = 20.12  # Current levels of annual concentration of NO2 (µg/m³)
 
-pm10_concentration_target = 10.0 # Target levels of annual concentration of PM10 (µg/m³)
-pm10_concentration_baseline = 25.0  # Baseline levels of annual concentration of PM10 (µg/m³)
+pm10_concentration_target = 15.0 # Target levels of annual concentration of PM10 (µg/m³)
+pm10_concentration_baseline = 15.95  # Baseline levels of annual concentration of PM10 (µg/m³)
 pm10_concentration_current = 10.52  # Current levels of annual concentration of PM10 (µg/m³) 
 
 pm25_concentration_target = 5.0 # Target levels of annual concentration of PM2.5 (µg/m³)
-pm25_concentration_baseline = 15.3  # Baseline levels of annual concentration of PM2.5 (µg/m³)
+pm25_concentration_baseline = 15.28  # Baseline levels of annual concentration of PM2.5 (µg/m³)
 pm25_concentration_current = 6.09  # Current levels of annual concentration of PM2.5 (µg/m³)
 
 pop_weighted_pm25_concentration_target = 5.0 # Target levels of population-weighted annual concentration of PM2.5 (µg/m³)
