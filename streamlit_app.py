@@ -51,8 +51,8 @@ housing_satisfaction_baseline = 0.0  # Baseline percentage of households that ar
 housing_satisfaction_current = 86.78  # Current percentage of households that are satisfied with housing 
 
 # Percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
-rent_cost_financial_concerns_target = 100.0 # Target percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
-rent_cost_financial_concerns_baseline = 0.0  # Baseline percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
+rent_cost_financial_concerns_target = 0.0 # Target percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
+rent_cost_financial_concerns_baseline = 100.0  # Baseline percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
 rent_cost_financial_concerns_current = 25.03  # Current percentage of people who consider rent cost among the 2-3 biggest financial concern for their household
 
 # Percentage of homes with an EPC band at B/C or above
