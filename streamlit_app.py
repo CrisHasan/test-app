@@ -3,6 +3,21 @@ import altair as alt
 import pandas as pd
 
 ###############################################
+# Percentage of surface waters in Glasgow City that have at least good water quality
+surface_water_quality_target = 100.0 # Target percentage of surface waters with at least good water quality
+surface_water_quality_baseline = 0.0  # Baseline percentage of surface waters with at least good water quality
+surface_water_quality_current = 37.9  # Current percentage of surface waters with at least good water quality
+
+# Percentage of Glasgow's surface waters assessed as having at least ‘good’ overall status
+surface_water_overall_status_target = 100.0 # Target percentage of surface waters assessed as having at least ‘good’ overall status 
+surface_water_overall_status_baseline = 0.0  # Baseline percentage of surface waters assessed as having at least ‘good’ overall status  
+surface_water_overall_status_current = 27.6  # Current percentage of surface waters assessed as having at least ‘good’ overall status   
+
+# Percentage of Glasgow's groundwaters assessed as having at least 'good' status
+groundwater_quality_target = 100.0 # Target percentage of groundwaters assessed as having at least 'good' status    
+groundwater_quality_baseline = 0.0  # Baseline percentage of groundwaters assessed as having at least 'good' status 
+groundwater_quality_current = 66.7  # Current percentage of groundwaters assessed as having at least 'good' status 
+
 tree_canopy_coverage_target = 20.0 # Target percentage of tree canopy coverage
 tree_canopy_coverage_baseline = 0.0  # Baseline percentage of tree canopy coverage
 tree_canopy_coverage_current = 18.0  # Current percentage of tree canopy coverage
@@ -175,6 +190,49 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
 
 ###############################################
 st.title("Indicator Workshop Interactive Tool")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Cycle Water indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+surface_water_quality_target = st.number_input("Target percentage of surface waters with at least good water quality (%)", min_value=0.0, max_value=100.0, value=surface_water_quality_target, step=0.1)    
+surface_water_quality_baseline = st.number_input("Baseline percentage of surface waters with at least good water quality (%)", min_value=0.0, max_value=100.0, value=surface_water_quality_baseline, step=0.1)      
+surface_water_quality_current = st.slider("Current percentage of surface waters with at least good water quality (%)", min_value=0.0, max_value=100.0, value=surface_water_quality_current, step=0.1)   
+surface_water_quality_overshoot_value = min(100,100*(surface_water_quality_target - surface_water_quality_current)/(surface_water_quality_target - surface_water_quality_baseline))     
+altair_horizontal_bar_chart(
+    x=[surface_water_quality_overshoot_value],
+    y=["Surface Water Quality"],
+    title="Surface Water Quality Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+surface_water_overall_status_target = st.number_input("Target percentage of surface waters assessed as having at least ‘good’ overall status (%)", min_value=0.0, max_value=100.0, value=surface_water_overall_status_target, step=0.1)         
+surface_water_overall_status_baseline = st.number_input("Baseline percentage of surface waters assessed as having at least ‘good’ overall status (%)", min_value=0.0, max_value=100.0, value=surface_water_overall_status_baseline, step=0.1)   
+surface_water_overall_status_current = st.slider("Current percentage of surface waters assessed as having at least ‘good’ overall status (%)", min_value=0.0, max_value=100.0, value=surface_water_overall_status_current, step=0.1)    
+surface_water_overall_status_overshoot_value = min(100,100*(surface_water_overall_status_target - surface_water_overall_status_current)/(surface_water_overall_status_target - surface_water_overall_status_baseline))  
+altair_horizontal_bar_chart(
+    x=[surface_water_overall_status_overshoot_value],
+    y=["Surface Water Overall Status"],
+    title="Surface Water Overall Status Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+groundwater_quality_target = st.number_input("Target percentage of groundwaters assessed as having at least 'good' status (%)", min_value=0.0, max_value=100.0, value=groundwater_quality_target, step=0.1) 
+groundwater_quality_baseline = st.number_input("Baseline percentage of groundwaters assessed as having at least 'good' status (%)", min_value=0.0, max_value=100.0, value=groundwater_quality_baseline, step=0.1)   
+groundwater_quality_current = st.slider("Current percentage of groundwaters assessed as having at least 'good' status (%)", min_value=0.0, max_value=100.0, value=groundwater_quality_current, step=0.1)    
+groundwater_quality_overshoot_value = min(100,100*(groundwater_quality_target - groundwater_quality_current)/(groundwater_quality_target - groundwater_quality_baseline))   
+altair_horizontal_bar_chart(
+    x=[groundwater_quality_overshoot_value],
+    y=["Groundwater Quality"],
+    title="Groundwater Quality Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
 st.header("Store Carbon indicators")
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
