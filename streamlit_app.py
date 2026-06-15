@@ -3,6 +3,26 @@ import altair as alt
 import pandas as pd
 
 ###############################################
+# Percentage of journeys where main mode of travel is active travel or public transport
+active_travel_public_transport_target = 90.0 # Target percentage of journeys where main mode of travel is active travel or public transport
+active_travel_public_transport_baseline = 0.0  # Baseline percentage of journeys where main mode of travel is active travel or public transport
+active_travel_public_transport_current = 45.52  # Current percentage of journeys where main mode of travel is active travel or public transport  
+
+# Satisfaction with public transport
+public_transport_satisfaction_target = 100.0 # Target percentage of people satisfied with public transport  
+public_transport_satisfaction_baseline = 0.0  # Baseline percentage of people satisfied with public transport
+public_transport_satisfaction_current = 34.41  # Current percentage of people satisfied with public transport    
+
+# Household access to a bike
+household_bike_access_target = 80.0 # Target percentage of households with access to a bike    
+household_bike_access_baseline = 0.0  # Baseline percentage of households with access to a bike
+household_bike_access_current = 25.5  # Current percentage of households with access to a bike
+
+# Percentage of adults in Glasgow who feel safe when walking at night
+walking_safety_target = 100.0 # Target percentage of adults in Glasgow who feel safe when walking at night
+walking_safety_baseline = 0.0  # Baseline percentage of adults in Glasgow who feel safe when walking at night
+walking_safety_current = 78.0  # Current percentage of adults in Glasgow who feel safe when walking at night
+
 # Percentage of surface waters in Glasgow City that have at least good water quality
 surface_water_quality_target = 100.0 # Target percentage of surface waters with at least good water quality
 surface_water_quality_baseline = 0.0  # Baseline percentage of surface waters with at least good water quality
@@ -190,6 +210,65 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
 
 ###############################################
 st.title("Indicator Workshop Interactive Tool")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Mobility indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+active_travel_public_transport_target = st.number_input("Target percentage of journeys where main mode of travel is active travel or public transport (%)", min_value=0.0, max_value=100.0, value=active_travel_public_transport_target, step=0.1)  
+active_travel_baseline = st.number_input("Baseline percentage of journeys where main mode of travel is active travel or public transport (%)", min_value=0.0, max_value=100.0, value=active_travel_public_transport_baseline, step=0.1)
+active_travel_mode_current = st.slider("Current percentage of journeys where main mode of travel is active travel or public transport (%)", min_value=0.0, max_value=100.0, value=active_travel_public_transport_current, step=0.1) 
+active_travel_mode_shortfall_value = min(100,100*(active_travel_public_transport_target - active_travel_mode_current)/(active_travel_public_transport_target - active_travel_baseline)) 
+altair_horizontal_bar_chart(
+    x=[active_travel_mode_shortfall_value],
+    y=["Active Travel or Public Transport"],
+    title="Active Travel or Public Transport Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+public_transport_satisfaction_baseline = st.number_input("Baseline percentage of people satisfied with public transport (%)", min_value=0.0, max_value=100.0, value=public_transport_satisfaction_baseline, step=0.1)   
+public_transport_satisfaction_target = st.number_input("Target percentage of people satisfied with public transport (%)", min_value=0.0, max_value=100.0, value=public_transport_satisfaction_target, step=0.1) 
+public_transport_satisfaction_current = st.slider("Current percentage of people satisfied with public transport (%)", min_value=0.0, max_value=100.0, value=public_transport_satisfaction_current, step=0.1)    
+public_transport_satisfaction_shortfall_value = min(100,100*(public_transport_satisfaction_target - public_transport_satisfaction_current)/(public_transport_satisfaction_target - public_transport_satisfaction_baseline)) 
+altair_horizontal_bar_chart(
+    x=[public_transport_satisfaction_shortfall_value],    
+    y=["Public Transport Satisfaction"],    
+    title="Public Transport Satisfaction Shortfall",    
+    xlabel="Category",  
+    y_min=0,
+    y_max=100
+)
+
+household_bike_access_baseline = st.number_input("Baseline percentage of households with access to a bike (%)", min_value=0.0, max_value=100.0, value=household_bike_access_baseline, step=0.1) 
+household_bike_access_target = st.number_input("Target percentage of households with access to a bike (%)", min_value=0.0, max_value=100.0, value=household_bike_access_target, step=0.1)   
+household_bike_access_current = st.slider("Current percentage of households with access to a bike (%)", min_value=0.0, max_value=100.0, value=household_bike_access_current, step=0.1)  
+household_bike_access_shortfall_value = min(100,100*(household_bike_access_target - household_bike_access_current)/(household_bike_access_target - household_bike_access_baseline))     
+altair_horizontal_bar_chart(
+    x=[household_bike_access_shortfall_value],    
+    y=["Household Bike Access"],    
+    title="Household Bike Access Shortfall",    
+    xlabel="Category",  
+    y_min=0,
+    y_max=100
+)   
+
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Peace and Justice indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+adult_walking_safety_target = st.number_input("Target percentage of adults in Glasgow who feel safe when walking at night (%)", min_value=0.0, max_value=100.0, value=walking_safety_target, step=0.1)  
+adult_walking_safety_baseline = st.number_input("Baseline percentage of adults in Glasgow who feel safe when walking at night (%)", min_value=0.0, max_value=100.0, value=walking_safety_baseline, step=0.1)    
+adult_walking_safety_current = st.slider("Current percentage of adults in Glasgow who feel safe when walking at night (%)", min_value=0.0, max_value=100.0, value=walking_safety_current, step=0.1) 
+adult_walking_safety_shortfall_value = min(100,100*(adult_walking_safety_target - adult_walking_safety_current)/(adult_walking_safety_target - adult_walking_safety_baseline))  
+altair_horizontal_bar_chart(
+    x=[adult_walking_safety_shortfall_value],
+    y=["Adult Walking Safety"],
+    title="Adult Walking Safety Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
 st.header("Cycle Water indicators")
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
