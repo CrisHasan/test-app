@@ -23,6 +23,12 @@ walking_safety_target = 100.0 # Target percentage of adults in Glasgow who feel 
 walking_safety_baseline = 0.0  # Baseline percentage of adults in Glasgow who feel safe when walking at night
 walking_safety_current = 78.0  # Current percentage of adults in Glasgow who feel safe when walking at night
 
+# Crimes in Glasgow per 10,000 population
+crimes_in_glasgow_target = 497.0 # Target number of crimes per 10,000 population
+crimes_in_glasgow_baseline = 1127.0  # Baseline number of crimes per 10,000 population
+crimes_in_glasgow_current = 829.0  # Current number of crimes per 10,000 population
+
+
 # Percentage of surface waters in Glasgow City that have at least good water quality
 surface_water_quality_target = 100.0 # Target percentage of surface waters with at least good water quality
 surface_water_quality_baseline = 0.0  # Baseline percentage of surface waters with at least good water quality
@@ -267,6 +273,21 @@ altair_horizontal_bar_chart(
     y_min=0,
     y_max=100
 )
+
+
+crimes_in_glasgow_baseline = st.number_input("Baseline number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_baseline, step=1.0)
+crimes_in_glasgow_target = st.number_input("Target number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_target, step=1.0)
+crimes_in_glasgow_current = st.slider("Current number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_current, step=1.0) 
+crimes_in_glasgow_shortfall_value = min(100,100*(crimes_in_glasgow_current - crimes_in_glasgow_target)/(crimes_in_glasgow_baseline - crimes_in_glasgow_target)) 
+altair_horizontal_bar_chart(
+    x=[crimes_in_glasgow_shortfall_value],
+    y=["Crimes in Glasgow"],
+    title="Crimes in Glasgow Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+) 
+
 
 
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
