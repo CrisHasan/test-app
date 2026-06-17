@@ -274,9 +274,8 @@ altair_horizontal_bar_chart(
     y_max=100
 )
 
-
-crimes_in_glasgow_baseline = st.number_input("Baseline number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_baseline, step=1.0)
 crimes_in_glasgow_target = st.number_input("Target number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_target, step=1.0)
+crimes_in_glasgow_baseline = st.number_input("Baseline number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_baseline, step=1.0)
 crimes_in_glasgow_current = st.slider("Current number of crimes per 10,000 population", min_value=0.0, max_value=2000.0, value=crimes_in_glasgow_current, step=1.0) 
 crimes_in_glasgow_shortfall_value = min(100,100*(crimes_in_glasgow_current - crimes_in_glasgow_target)/(crimes_in_glasgow_baseline - crimes_in_glasgow_target)) 
 altair_horizontal_bar_chart(
