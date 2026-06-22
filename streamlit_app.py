@@ -247,9 +247,9 @@ altair_horizontal_bar_chart(
     y_max=100
 )   
 
-renewable_electricity_generation_sites_ambition = st.number_input("Ambition number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=5000.0, value=renewable_electricity_generation_sites_ambition, step=10.0)    
-renewable_electricity_generation_sites_WC = st.number_input("Worst-case number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=5000.0, value=renewable_electricity_generation_sites_WC, step=10.0)  
-renewable_electricity_generation_sites_current = st.slider("Current number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=5000.0, value=renewable_electricity_generation_sites_current, step=10.0) 
+renewable_electricity_generation_sites_ambition = st.number_input("Ambition number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=30000.0, value=renewable_electricity_generation_sites_ambition, step=10.0)    
+renewable_electricity_generation_sites_WC = st.number_input("Worst-case number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=30000.0, value=renewable_electricity_generation_sites_WC, step=10.0)  
+renewable_electricity_generation_sites_current = st.slider("Current number of renewable electricity generation sites in Glasgow", min_value=0.0, max_value=30000.0, value=renewable_electricity_generation_sites_current, step=10.0) 
 renewable_electricity_generation_sites_overshoot_value = min(100,100*(renewable_electricity_generation_sites_ambition - renewable_electricity_generation_sites_current)/(renewable_electricity_generation_sites_ambition - renewable_electricity_generation_sites_WC))  
 altair_horizontal_bar_chart(
     x=[renewable_electricity_generation_sites_overshoot_value],
