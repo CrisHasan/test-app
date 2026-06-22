@@ -18,6 +18,81 @@ renewable_electricity_capacity_ambition = 100.0 # Ambition level of installed re
 renewable_electricity_capacity_WC = 25.0  # Worst-case level of installed renewable electricity capacity in Glasgow (in MW)  
 renewable_electricity_capacity_current = 53.4  # Current level of installed renewable electricity capacity in Glasgow (in MW)    
 
+# Bare soil index for Glasgow local authority
+bare_soil_index_ambition = -0.5 # Ambition mean bare soil index for Glasgow local authority
+bare_soil_index_WC = 1.0  # Worst-case mean bare soil index for Glasgow local authority
+bare_soil_index_current = 0.112  # Current mean bare soil index for Glasgow local authority
+
+# Percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+percentage_VDL_ambition = 0.0 # Ambition percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+percentage_VDL_WC = 10.0  # Worst-case percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+percentage_VDL_current = 4.43  # Current percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+
+# Proportion of publicly accessible greenspaces
+greenspace_access_ambition = 21.0 # Ambition proportion of publicly accessible greenspaces
+greenspace_access_WC = 0.0  # Worst-case proportion of publicly accessible greenspaces
+greenspace_access_current = 42.9  # Current proportion of publicly accessible greenspaces
+
+# Percentage of households that are within 10 minutes walk to green or blue spaces
+percentage_households_within_10min_walk_to_green_blue_spaces_ambition = 100.0 # Ambition percentage of households that are within 10 minutes walk to green or blue spaces
+percentage_households_within_10min_walk_to_green_blue_spaces_WC = 0.0  # Worst-case percentage of households that are within 10 minutes walk to green or blue spaces
+percentage_households_within_10min_walk_to_green_blue_spaces_current = 83.89  # Current percentage of households that are within 10 minutes walk to green or blue spaces
+
+# Percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)
+percentage_school_leavers_SCQF_level_5_ambition = 100.0 # Ambition percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)  
+percentage_school_leavers_SCQF_level_5_WC = 0.0  # Worst-case percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)
+percentage_school_leavers_SCQF_level_5_current = 80.4  # Current percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)
+
+# Satisfaction with primary schools
+percentage_satisfaction_primary_schools_ambition = 100.0 # Ambition percentage of people satisfied with primary schools
+percentage_satisfaction_primary_schools_WC = 0.0  # Worst-case percentage of people satisfied with primary schools
+percentage_satisfaction_primary_schools_current = 82.52  # Current percentage of people satisfied with primary schools
+
+# Satisfaction with secondary schools
+percentage_satisfaction_secondary_schools_ambition = 100.0 # Ambition percentage of people satisfied with secondary schools
+percentage_satisfaction_secondary_schools_WC = 0.0  # Worst-case percentage of people satisfied with secondary schools
+percentage_satisfaction_secondary_schools_current = 71.25  # Current percentage of people satisfied with secondary schools
+
+# Positive destinations of school leavers in deprived areas
+positive_destinations_deprived_areas_ambition = 100.0 # Ambition percentage of school leavers in deprived areas with positive destinations
+positive_destinations_deprived_areas_WC = 0.0  # Worst-case percentage of school leavers in deprived areas with positive destinations
+positive_destinations_deprived_areas_current = 96.0  # Current percentage of school leavers in deprived areas with positive destinations
+
+# Positive destinations of school leavers in Glasgow
+positive_destinations_glasgow_ambition = 100.0 # Ambition percentage of school leavers in Glasgow with positive destinations
+positive_destinations_glasgow_WC = 0.0  # Worst-case percentage of school leavers in Glasgow with positive destinations
+positive_destinations_glasgow_current = 95.0  # Current percentage of school leavers in Glasgow with positive destinations
+
+# Percentage of people in Glasgow with a positive perception of local NHS GP/Doctor services
+positive_perception_NHS_GP_ambition = 100.0 # Ambition percentage of people in Glasgow with a positive perception of local NHS GP/Doctor services
+positive_perception_NHS_GP_WC = 0.0  # Worst-case percentage of people in Glasgow with a positive perception of local NHS GP/Doctor services
+positive_perception_NHS_GP_current = 59.7  # Current percentage of people in Glasgow with a positive perception of local NHS GP/Doctor services
+
+# Gap in the percentage of people with a positive perception of local NHS GP/Doctor services between the bottom 15% deprived areas and other areas in Glasgow
+gap_positive_perception_NHS_GP_ambition = 0.0 # Ambition gap in the percentage of people with a positive perception of local NHS GP/Doctor services
+gap_positive_perception_NHS_GP_WC = 100.0  # Worst-case gap in the percentage of people with a positive perception of local NHS GP/Doctor services
+gap_positive_perception_NHS_GP_current = 4.4  # Current gap in the percentage of people with a positive perception of local NHS GP/Doctor services
+
+# Percentage of people in Glasgow with a positive view of their physical wellbeing
+positive_physical_wellbeing_ambition = 100.0 # Ambition percentage of people in Glasgow with a positive view of their physical wellbeing
+positive_physical_wellbeing_WC = 0.0  # Worst-case percentage of people in Glasgow with a positive view of their physical wellbeing
+positive_physical_wellbeing_current = 79.0  # Current percentage of people in Glasgow with a positive view of their physical wellbeing
+
+# Gap in the percentage of people with a positive view of their physical wellbeing between the bottom 15% deprived areas and other areas in Glasgow
+gap_positive_physical_wellbeing_ambition = 0.0 # Ambition gap in the percentage of people with a positive view of their physical wellbeing
+gap_positive_physical_wellbeing_WC = 100.0  # Worst-case gap in the percentage of people with a positive view of their physical wellbeing
+gap_positive_physical_wellbeing_current = 9.5  # Current gap in the percentage of people with a positive view of their physical wellbeing
+
+# Percentage of people in Glasgow with a positive view of their mental/emotional wellbeing
+positive_mental_emotional_wellbeing_ambition = 100.0 # Ambition percentage of people in Glasgow with a positive view of their mental/emotional wellbeing
+positive_mental_emotional_wellbeing_WC = 0.0  # Worst-case percentage of people in Glasgow with a positive view of their mental/emotional wellbeing
+positive_mental_emotional_wellbeing_current = 79.9  # Current percentage of people in Glasgow with a positive view of their mental/emotional wellbeing
+
+# Gap in the percentage of people with a positive view of their mental/emotional wellbeing between the bottom 15% deprived areas and other areas in Glasgow
+gap_positive_mental_emotional_wellbeing_ambition = 0.0 # Ambition gap in the percentage of people with a positive view of their mental/emotional wellbeing
+gap_positive_mental_emotional_wellbeing_WC = 100.0  # Worst-case gap in the percentage of people with a positive view of their mental/emotional wellbeing
+gap_positive_mental_emotional_wellbeing_current = 6.9  # Current gap in the percentage of people with a positive view of their mental/emotional wellbeing
+
 # Percentage of journeys where main mode of travel is active travel or public transport
 active_travel_public_transport_target = 90.0 # Target percentage of journeys where main mode of travel is active travel or public transport
 active_travel_public_transport_baseline = 0.0  # Baseline percentage of journeys where main mode of travel is active travel or public transport
@@ -231,6 +306,214 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
 
 ###############################################
 st.title("Indicator Workshop Interactive Tool")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Build and Protect Soil indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+bare_soil_index_ambition = st.number_input("Ambition mean bare soil index for Glasgow local authority", min_value=-1.0, max_value=1.0, value=bare_soil_index_ambition, step=0.01)   
+bare_soil_index_WC = st.number_input("Worst-case mean bare soil index for Glasgow local authority", min_value=-1.0, max_value=1.0, value=bare_soil_index_WC, step=0.01) 
+bare_soil_index_current = st.slider("Current mean bare soil index for Glasgow local authority", min_value=-1.0, max_value=1.0, value=bare_soil_index_current, step=0.01)    
+bare_soil_index_overshoot_value = min(100,100*(bare_soil_index_ambition - bare_soil_index_current)/(bare_soil_index_ambition - bare_soil_index_WC)) 
+altair_horizontal_bar_chart(
+    x=[bare_soil_index_overshoot_value],
+    y=["Bare Soil Index"],
+    title="Bare Soil Index Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+percentage_VDL_ambition = st.number_input("Ambition percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)", min_value=0.0, max_value=100.0, value=percentage_VDL_ambition, step=0.1)  
+percentage_VDL_WC = st.number_input("Worst-case percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)", min_value=0.0, max_value=100.0, value=percentage_VDL_WC, step=0.1)    
+percentage_VDL_current = st.slider("Current percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)", min_value=0.0, max_value=100.0, value=percentage_VDL_current, step=0.1)   
+percentage_VDL_overshoot_value = min(100,100*(percentage_VDL_ambition - percentage_VDL_current)/(percentage_VDL_ambition - percentage_VDL_WC))
+altair_horizontal_bar_chart(
+    x=[percentage_VDL_overshoot_value],
+    y=["Vacant and Derelict Land (VDL)"],
+    title="Vacant and Derelict Land (VDL) Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Enhance Wellbeing indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+proportion_publicly_accessible_greenspaces_ambition = st.number_input("Ambition proportion of publicly accessible greenspaces", min_value=0.0, max_value=100.0, value=greenspace_access_ambition, step=0.1)
+proportion_publicly_accessible_greenspaces_WC = st.number_input("Worst-case proportion of publicly accessible greenspaces", min_value=0.0, max_value=100.0, value=greenspace_access_WC, step=0.1)
+proportion_publicly_accessible_greenspaces_current = st.slider("Current proportion of publicly accessible greenspaces", min_value=0.0, max_value=100.0, value=greenspace_access_current, step=0.1)
+proportion_publicly_accessible_greenspaces_overshoot_value = min(100,100*(proportion_publicly_accessible_greenspaces_ambition - proportion_publicly_accessible_greenspaces_current)/(proportion_publicly_accessible_greenspaces_ambition - proportion_publicly_accessible_greenspaces_WC))
+altair_horizontal_bar_chart(
+    x=[proportion_publicly_accessible_greenspaces_overshoot_value],
+    y=["Proportion of Publicly Accessible Greenspaces"],
+    title="Proportion of Publicly Accessible Greenspaces Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+percentage_households_within_10min_walk_to_green_blue_spaces_ambition = st.number_input("Ambition percentage of households that are within 10 minutes walk to green or blue spaces", min_value=0.0, max_value=100.0, value=percentage_households_within_10min_walk_to_green_blue_spaces_ambition, step=0.1)
+percentage_households_within_10min_walk_to_green_blue_spaces_WC = st.number_input("Worst-case percentage of households that are within 10 minutes walk to green or blue spaces", min_value=0.0, max_value=100.0, value=percentage_households_within_10min_walk_to_green_blue_spaces_WC, step=0.1)
+percentage_households_within_10min_walk_to_green_blue_spaces_current = st.slider("Current percentage of households that are within 10 minutes walk to green or blue spaces", min_value=0.0, max_value=100.0, value=percentage_households_within_10min_walk_to_green_blue_spaces_current, step=0.1)
+percentage_households_within_10min_walk_to_green_blue_spaces_overshoot_value = min(100,100*(percentage_households_within_10min_walk_to_green_blue_spaces_ambition - percentage_households_within_10min_walk_to_green_blue_spaces_current)/(percentage_households_within_10min_walk_to_green_blue_spaces_ambition - percentage_households_within_10min_walk_to_green_blue_spaces_WC))
+altair_horizontal_bar_chart(
+    x=[percentage_households_within_10min_walk_to_green_blue_spaces_overshoot_value],
+    y=["Percentage of Households within 10min Walk to Green/Blue Spaces"],
+    title="Percentage of Households within 10min Walk to Green/Blue Spaces Overshoot",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Education indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+percentage_school_leavers_SCQF_level_5_ambition = st.number_input("Ambition percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)", min_value=0.0, max_value=100.0, value=percentage_school_leavers_SCQF_level_5_ambition, step=0.1)
+percentage_school_leavers_SCQF_level_5_WC = st.number_input("Worst-case percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)", min_value=0.0, max_value=100.0, value=percentage_school_leavers_SCQF_level_5_WC, step=0.1)
+percentage_school_leavers_SCQF_level_5_current = st.slider("Current percentage of Datazones where the average of the highest SCQF level for school leavers was greater than 5 (equivalent to Nat 5)", min_value=0.0, max_value=100.0, value=percentage_school_leavers_SCQF_level_5_current, step=0.1)
+percentage_school_leavers_SCQF_level_5_shortfall_value = min(100,100*(percentage_school_leavers_SCQF_level_5_ambition - percentage_school_leavers_SCQF_level_5_current)/(percentage_school_leavers_SCQF_level_5_ambition - percentage_school_leavers_SCQF_level_5_WC))
+altair_horizontal_bar_chart(
+    x=[percentage_school_leavers_SCQF_level_5_shortfall_value],
+    y=["Percentage of School Leavers with SCQF Level 5"],
+    title="Percentage of School Leavers with SCQF Level 5 Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+percentage_satisfaction_primary_schools_ambition = st.number_input("Ambition percentage of people satisfied with primary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_primary_schools_ambition, step=0.1)
+percentage_satisfaction_primary_schools_WC = st.number_input("Worst-case percentage of people satisfied with primary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_primary_schools_WC, step=0.1)
+percentage_satisfaction_primary_schools_current = st.slider("Current percentage of people satisfied with primary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_primary_schools_current, step=0.1)
+percentage_satisfaction_primary_schools_shortfall_value = min(100,100*(percentage_satisfaction_primary_schools_ambition - percentage_satisfaction_primary_schools_current)/(percentage_satisfaction_primary_schools_ambition - percentage_satisfaction_primary_schools_WC))
+altair_horizontal_bar_chart(
+    x=[percentage_satisfaction_primary_schools_shortfall_value],
+    y=["Percentage of People Satisfied with Primary Schools"],
+    title="Percentage of People Satisfied with Primary Schools Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+percentage_satisfaction_secondary_schools_ambition = st.number_input("Ambition percentage of people satisfied with secondary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_secondary_schools_ambition, step=0.1)
+percentage_satisfaction_secondary_schools_WC = st.number_input("Worst-case percentage of people satisfied with secondary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_secondary_schools_WC, step=0.1)
+percentage_satisfaction_secondary_schools_current = st.slider("Current percentage of people satisfied with secondary schools", min_value=0.0, max_value=100.0, value=percentage_satisfaction_secondary_schools_current, step=0.1)
+percentage_satisfaction_secondary_schools_shortfall_value = min(100,100*(percentage_satisfaction_secondary_schools_ambition - percentage_satisfaction_secondary_schools_current)/(percentage_satisfaction_secondary_schools_ambition - percentage_satisfaction_secondary_schools_WC))
+altair_horizontal_bar_chart(
+    x=[percentage_satisfaction_secondary_schools_shortfall_value],
+    y=["Percentage of People Satisfied with Secondary Schools"],
+    title="Percentage of People Satisfied with Secondary Schools Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+positive_destinations_deprived_areas_ambition = st.number_input("Ambition percentage of school leavers in deprived areas of Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_deprived_areas_ambition, step=0.1)
+positive_destinations_deprived_areas_WC = st.number_input("Worst-case percentage of school leavers in deprived areas of Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_deprived_areas_WC, step=0.1)
+positive_destinations_deprived_areas_current = st.slider("Current percentage of school leavers in deprived areas of Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_deprived_areas_current, step=0.1)
+positive_destinations_deprived_areas_shortfall_value = min(100,100*(positive_destinations_deprived_areas_ambition - positive_destinations_deprived_areas_current)/(positive_destinations_deprived_areas_ambition - positive_destinations_deprived_areas_WC))
+altair_horizontal_bar_chart(
+    x=[positive_destinations_deprived_areas_shortfall_value],
+    y=["Percentage of School Leavers in Positive Destinations in Deprived Areas"],
+    title="Percentage of School Leavers in Positive Destinations in Deprived Areas Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+positive_destinations_glasgow_ambition = st.number_input("Ambition percentage of school leavers in Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_glasgow_ambition, step=0.1)
+positive_destinations_glasgow_WC = st.number_input("Worst-case percentage of school leavers in Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_glasgow_WC, step=0.1)
+positive_destinations_glasgow_current = st.slider("Current percentage of school leavers in Glasgow who are in a positive destination", min_value=0.0, max_value=100.0, value=positive_destinations_glasgow_current, step=0.1)
+positive_destinations_glasgow_shortfall_value = min(100,100*(positive_destinations_glasgow_ambition - positive_destinations_glasgow_current)/(positive_destinations_glasgow_ambition - positive_destinations_glasgow_WC))
+altair_horizontal_bar_chart(
+    x=[positive_destinations_glasgow_shortfall_value],
+    y=["Percentage of School Leavers in Positive Destinations"],
+    title="Percentage of School Leavers in Positive Destinations Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Health indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+positive_perception_NHS_GP_ambition = st.number_input("Ambition percentage of people with a positive perception of NHS GP services", min_value=0.0, max_value=100.0, value=positive_perception_NHS_GP_ambition, step=0.1)
+positive_perception_NHS_GP_WC = st.number_input("Worst-case percentage of people with a positive perception of NHS GP services", min_value=0.0, max_value=100.0, value=positive_perception_NHS_GP_WC, step=0.1)
+positive_perception_NHS_GP_current = st.slider("Current percentage of people with a positive perception of NHS GP services", min_value=0.0, max_value=100.0, value=positive_perception_NHS_GP_current, step=0.1)
+positive_perception_NHS_GP_shortfall_value = min(100,100*(positive_perception_NHS_GP_ambition - positive_perception_NHS_GP_current)/(positive_perception_NHS_GP_ambition - positive_perception_NHS_GP_WC))
+altair_horizontal_bar_chart(
+    x=[positive_perception_NHS_GP_shortfall_value],
+    y=["Percentage of People with Positive Perception of NHS GP Services"],
+    title="Percentage of People with Positive Perception of NHS GP Services Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+gap_positive_perception_NHS_GP_ambition = st.number_input("Ambition gap in the percentage of people with a positive perception of NHS GP services between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_perception_NHS_GP_ambition, step=0.1)
+gap_positive_perception_NHS_GP_WC = st.number_input("Worst-case gap in the percentage of people with a positive perception of NHS GP services between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_perception_NHS_GP_WC, step=0.1)
+gap_positive_perception_NHS_GP_current = st.slider("Current gap in the percentage of people with a positive perception of NHS GP services between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_perception_NHS_GP_current, step=0.1)
+gap_positive_perception_NHS_GP_shortfall_value = min(100,100*(gap_positive_perception_NHS_GP_ambition - gap_positive_perception_NHS_GP_current)/(gap_positive_perception_NHS_GP_ambition - gap_positive_perception_NHS_GP_WC))
+altair_horizontal_bar_chart(
+    x=[gap_positive_perception_NHS_GP_shortfall_value],
+    y=["Gap in Percentage of People with Positive Perception of NHS GP Services"],
+    title="Gap in Percentage of People with Positive Perception of NHS GP Services Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+positive_physical_wellbeing_ambition = st.number_input("Ambition percentage of people with positive physical wellbeing", min_value=0.0, max_value=100.0, value=positive_physical_wellbeing_ambition, step=0.1)
+positive_physical_wellbeing_WC = st.number_input("Worst-case percentage of people with positive physical wellbeing", min_value=0.0, max_value=100.0, value=positive_physical_wellbeing_WC, step=0.1)
+positive_physical_wellbeing_current = st.slider("Current percentage of people with positive physical wellbeing", min_value=0.0, max_value=100.0, value=positive_physical_wellbeing_current, step=0.1)
+positive_physical_wellbeing_shortfall_value = min(100,100*(positive_physical_wellbeing_ambition - positive_physical_wellbeing_current)/(positive_physical_wellbeing_ambition - positive_physical_wellbeing_WC))
+altair_horizontal_bar_chart(
+    x=[positive_physical_wellbeing_shortfall_value],
+    y=["Percentage of People with Positive Physical Wellbeing"],
+    title="Percentage of People with Positive Physical Wellbeing Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+gap_positive_physical_wellbeing_ambition = st.number_input("Ambition gap in the percentage of people with positive physical wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_physical_wellbeing_ambition, step=0.1)
+gap_positive_physical_wellbeing_WC = st.number_input("Worst-case gap in the percentage of people with positive physical wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_physical_wellbeing_WC, step=0.1)
+gap_positive_physical_wellbeing_current = st.slider("Current gap in the percentage of people with positive physical wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_physical_wellbeing_current, step=0.1)
+gap_positive_physical_wellbeing_shortfall_value = min(100,100*(gap_positive_physical_wellbeing_ambition - gap_positive_physical_wellbeing_current)/(gap_positive_physical_wellbeing_ambition - gap_positive_physical_wellbeing_WC))
+altair_horizontal_bar_chart(
+    x=[gap_positive_physical_wellbeing_shortfall_value],
+    y=["Gap in Percentage of People with Positive Physical Wellbeing"],
+    title="Gap in Percentage of People with Positive Physical Wellbeing Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)   
+
+# mental wellbeing indicators
+positive_mental_emotional_wellbeing_ambition = st.number_input("Ambition percentage of people with positive mental and emotional wellbeing", min_value=0.0, max_value=100.0, value=positive_mental_emotional_wellbeing_ambition, step=0.1)
+positive_mental_emotional_wellbeing_WC = st.number_input("Worst-case percentage of people with positive mental and emotional wellbeing", min_value=0.0, max_value=100.0, value=positive_mental_emotional_wellbeing_WC, step=0.1)
+positive_mental_emotional_wellbeing_current = st.slider("Current percentage of people with positive mental and emotional wellbeing", min_value=0.0, max_value=100.0, value=positive_mental_emotional_wellbeing_current, step=0.1)
+positive_mental_emotional_wellbeing_shortfall_value = min(100,100*(positive_mental_emotional_wellbeing_ambition - positive_mental_emotional_wellbeing_current)/(positive_mental_emotional_wellbeing_ambition - positive_mental_emotional_wellbeing_WC))
+altair_horizontal_bar_chart(
+    x=[positive_mental_emotional_wellbeing_shortfall_value],
+    y=["Positive Mental and Emotional Wellbeing"],
+    title="Positive Mental and Emotional Wellbeing Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)       
+
+gap_positive_mental_emotional_wellbeing_ambition = st.number_input("Ambition gap in the percentage of people with positive mental and emotional wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_mental_emotional_wellbeing_ambition, step=0.1)
+gap_positive_mental_emotional_wellbeing_WC = st.number_input("Worst-case gap in the percentage of people with positive mental and emotional wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_mental_emotional_wellbeing_WC, step=0.1)
+gap_positive_mental_emotional_wellbeing_current = st.slider("Current gap in the percentage of people with positive mental and emotional wellbeing between the bottom 15% deprived and other areas of Glasgow", min_value=0.0, max_value=100.0, value=gap_positive_mental_emotional_wellbeing_current, step=0.1)
+gap_positive_mental_emotional_wellbeing_shortfall_value = min(100,100*(gap_positive_mental_emotional_wellbeing_ambition - gap_positive_mental_emotional_wellbeing_current)/(gap_positive_mental_emotional_wellbeing_ambition - gap_positive_mental_emotional_wellbeing_WC))
+altair_horizontal_bar_chart(
+    x=[gap_positive_mental_emotional_wellbeing_shortfall_value  ],
+    y=["Gap in Positive Mental and Emotional Wellbeing"],
+    title="Gap in Positive Mental and Emotional Wellbeing Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)       
+
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
 st.header("Harvest Energy indicators")
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
