@@ -21,11 +21,11 @@ renewable_electricity_capacity_current = 53.4  # Current level of installed rene
 # Bare soil index for Glasgow local authority
 bare_soil_index_ambition = -0.5 # Ambition mean bare soil index for Glasgow local authority
 bare_soil_index_WC = 1.0  # Worst-case mean bare soil index for Glasgow local authority
-bare_soil_index_current = 0.112  # Current mean bare soil index for Glasgow local authority
+bare_soil_index_current = -0.112  # Current mean bare soil index for Glasgow local authority
 
 # Percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
-percentage_VDL_ambition = 0.0 # Ambition percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
-percentage_VDL_WC = 10.0  # Worst-case percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+percentage_VDL_ambition = 2.0 # Ambition percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
+percentage_VDL_WC = 8.57  # Worst-case percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
 percentage_VDL_current = 4.43  # Current percentage of Glasgow local authority covered by Vacant and Derelict Land (VDL)
 
 # Proportion of publicly accessible greenspaces
