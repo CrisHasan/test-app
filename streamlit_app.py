@@ -18,6 +18,16 @@ renewable_electricity_capacity_ambition = 100.0 # Ambition level of installed re
 renewable_electricity_capacity_WC = 25.0  # Worst-case level of installed renewable electricity capacity in Glasgow (in MW)  
 renewable_electricity_capacity_current = 53.4  # Current level of installed renewable electricity capacity in Glasgow (in MW)    
 
+# Voting turnout for the local authority elections
+voting_turnout_ambition = 50.0 # Ambition voting turnout for the local authority elections 
+voting_turnout_WC = 0.0  # Worst-case voting turnout for the local authority elections  
+voting_turnout_current = 38.4  # Current voting turnout for the local authority elections   
+
+# Percentage of people who feel that they can influence decisions affecting their local area
+influence_decisions_ambition = 30.0 # Ambition percentage of people who feel that they can influence decisions affecting their local area  
+influence_decisions_WC = 0.0  # Worst-case percentage of people who feel that they can influence decisions affecting their local area   
+influence_decisions_current = 15.22  # Current percentage of people who feel that they can influence decisions affecting their local area    
+
 # Bare soil index for Glasgow local authority
 bare_soil_index_ambition = -0.5 # Ambition mean bare soil index for Glasgow local authority
 bare_soil_index_WC = 1.0  # Worst-case mean bare soil index for Glasgow local authority
@@ -306,6 +316,35 @@ def altair_horizontal_bar_chart(x, y, xlabel=None, title="Horizontal Bar Chart",
 
 ###############################################
 st.title("Indicator Workshop Interactive Tool")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+st.header("Political Voice indicators")
+st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
+voting_turnout_ambition = st.number_input("Ambition voting turnout for the local authority elections", min_value=0.0, max_value=100.0, value=voting_turnout_ambition, step=0.1)
+voting_turnout_WC = st.number_input("Worst-case voting turnout for the local authority elections", min_value=0.0, max_value=100.0, value=voting_turnout_WC, step=0.1)
+voting_turnout_current = st.slider("Current voting turnout for the local authority elections", min_value=0.0, max_value=100.0, value=voting_turnout_current, step=0.1)
+voting_turnout_shortfall_value = min(100,100*(voting_turnout_ambition - voting_turnout_current)/(voting_turnout_ambition - voting_turnout_WC))
+altair_horizontal_bar_chart(
+    x=[voting_turnout_shortfall_value],
+    y=["Voting Turnout"],
+    title="Voting Turnout Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
+influence_decisions_ambition = st.number_input("Ambition percentage of people who feel that they can influence decisions affecting their local area", min_value=0.0, max_value=100.0, value=influence_decisions_ambition, step=0.1)
+influence_decisions_WC = st.number_input("Worst-case percentage of people who feel that they can influence decisions affecting their local area", min_value=0.0, max_value=100.0, value=influence_decisions_WC, step=0.1)
+influence_decisions_current = st.slider("Current percentage of people who feel that they can influence decisions affecting their local area", min_value=0.0, max_value=100.0, value=influence_decisions_current, step=0.1)
+influence_decisions_shortfall_value = min(100,100*(influence_decisions_ambition - influence_decisions_current)/(influence_decisions_ambition - influence_decisions_WC))
+altair_horizontal_bar_chart(
+    x=[influence_decisions_shortfall_value],
+    y=["Influence Decisions"],
+    title="Influence Decisions Shortfall",
+    xlabel="Category",
+    y_min=0,
+    y_max=100
+)
+
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
 st.header("Build and Protect Soil indicators")
 st.markdown("<hr style='border: 2px solid #0343DF;'>", unsafe_allow_html=True)
